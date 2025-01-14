@@ -2,10 +2,12 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 data_db = [
-    {'id': 1, 'title': 'Геоскан LITE', 'content': '''Геоскан LITE информация.''','img':'BAS/images/background_1.jpg',
+    {'id': 1, 'title': 'Геоскан LITE', 'content': '''Геоскан LITE информация.''','img':'BAS/images/geoskan_lite.png',
      'is_published': True},
-    {'id': 2, 'title': 'Геоскан MAX', 'content': 'Геоскан MAX информация', 'img':'BAS/images/background_1.jpg', 'is_published': False},
-    {'id': 3, 'title': 'Геоскан STANDART', 'content': 'Геоскан STANDART Информация', 'img':'BAS/images/background_1.jpg', 'is_published': True},
+    {'id': 2, 'title': 'Геоскан 201', 'content': 'Геоскан 201 информация', 'img':'BAS/images/geoskan_201.png', 'is_published': False},
+    {'id': 3, 'title': 'Геоскан 701', 'content': 'Геоскан 701 Информация', 'img':'BAS/images/geoskan_701.png', 'is_published': True},
+    {'id': 4, 'title': 'Геоскан 401', 'content': 'Геоскан 401 Информация', 'img':'BAS/images/geoskan_401.png', 'is_published': True},
+    {'id': 5, 'title': 'Геоскан 401', 'content': 'Геоскан 401 Информация', 'img':'BAS/images/geoskan_401.png', 'is_published': True},
 ]
 
 

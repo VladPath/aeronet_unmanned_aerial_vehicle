@@ -1,16 +1,23 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 
 
-<h1 class="font-mono">body</h1>
-<ul>
+
+<div class="d-flex flex-wrap w-100 my-md-3 ps-md-3 grid gap-3  ">
+    
     {% for elem in data %}
-    <li>    
-        <img src="{{ elem.img }}" alt="">
-        <h2 class="font-mono">{{elem.title}}</h2>
-        <p class="font-mono">{{elem.content}}</p>
-        {% endfor %}
-    </li>
-</ul>
+
+    <div class="text-bg-white me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 py-3">
+            <h2 class="display-5">{{elem.title}}</h2>
+            <p class="lead">{{elem.content}}</p>
+            <img class="object-fit-contain" src="{% static elem.img %}" alt="">
+        </div>
+
+
+    </div>
+    {% endfor %}
+</div>
 {% endblock content %}
