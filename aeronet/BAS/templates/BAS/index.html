@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<h1 class="font-mono">body</h1>
+<ul>
+    {% for elem in data %}
+    <li>    
+        <img src="{{ elem.img }}" alt="">
+        <h2 class="font-mono">{{elem.title}}</h2>
+        <p class="font-mono">{{elem.content}}</p>
+        {% endfor %}
+    </li>
+</ul>
+{% endblock content %}
