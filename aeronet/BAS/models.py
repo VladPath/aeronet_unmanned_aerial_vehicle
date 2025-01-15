@@ -26,5 +26,5 @@ class DroneModels(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse("post", kwargs={"post_slug": self.slug})
+        return reverse("about", kwargs={"about_slug": self.slug})
 

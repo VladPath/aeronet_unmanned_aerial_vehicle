@@ -1,5 +1,7 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
+
+from .models import DroneModels
 
 data_db = [
     {'id': 1, 'title': 'Геоскан LITE', 'content': '''Геоскан LITE информация.''','img':'BAS/images/geoskan_lite.png',
@@ -13,12 +15,32 @@ data_db = [
 
 # Create your views here.
 def index(request):
-    
+    posts = DroneModels.published.all()
     data = {
         'title':'Каталог Российских моделей БАС',
         'data': data_db,
+        'post':posts
     }
     return render(request, 'BAS/index.html', context=data)
+
+# def about(request, about_slug):
+#     drone = get_object_or_404(DroneModels, slug = about_slug)
+    
+#     data = {
+#         'title':'Каталог Российских моделей БАС',
+#         'data': data_db,
+#         'drone': drone
+        
+#     }
+#     return render(request, 'BAS/about.html', context=data)
+def about(request, about_slug):
+    drone = get_object_or_404(DroneModels, slug = about_slug)
+    data = {
+        'title':'Каталог Российских моделей БАС',
+        'data': data_db,
+        'drone': drone
+    }
+    return render(request, 'BAS/about.html', context=data)
 
 
 

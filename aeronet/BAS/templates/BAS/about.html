@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<figure class="figure block">
+    <img src="{% static drone.image %}" class="figure-img img-fluid rounded" alt="...">
+    <figcaption class="figure-caption">{{drone.title}}</figcaption>
+    <figcaption class="figure-caption"><a href="#">Подрнобнее на официальном сайте</a></figcaption>
+    <p class="figure-caption">{{drone.content |linebreaks}}</p>
+</figure>
+
+
+{% endblock content %}
