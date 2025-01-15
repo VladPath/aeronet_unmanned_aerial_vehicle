@@ -23,16 +23,6 @@ def index(request):
     }
     return render(request, 'BAS/index.html', context=data)
 
-# def about(request, about_slug):
-#     drone = get_object_or_404(DroneModels, slug = about_slug)
-    
-#     data = {
-#         'title':'Каталог Российских моделей БАС',
-#         'data': data_db,
-#         'drone': drone
-        
-#     }
-#     return render(request, 'BAS/about.html', context=data)
 def about(request, about_slug):
     drone = get_object_or_404(DroneModels, slug = about_slug)
     data = {
