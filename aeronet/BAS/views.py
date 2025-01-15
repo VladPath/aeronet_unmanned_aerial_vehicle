@@ -25,10 +25,12 @@ def index(request):
 
 def about(request, about_slug):
     drone = get_object_or_404(DroneModels, slug = about_slug)
+    posts = DroneModels.published.all()
     data = {
         'title':'Каталог Российских моделей БАС',
         'data': data_db,
-        'drone': drone
+        'drone': drone,
+        'post':posts
     }
     return render(request, 'BAS/about.html', context=data)
 

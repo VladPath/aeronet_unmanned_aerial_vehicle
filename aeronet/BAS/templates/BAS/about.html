@@ -3,14 +3,29 @@
 {% block content %}
 
 <figure class="figure block p-5">
-    <img src="{% static drone.image %}" class="figure-img img-fluid rounded" alt="...">
+    <img src="{% static drone.image %}" class=" mx-auto figure-img img-fluid rounded" alt="...">
     <br>    
-    <a class=' text-decoration-none text-blue' href="#">Подрнобнее на официальном сайте</a></figcaption>  
     <figcaption class="figure-caption ">{{drone.title}}</figcaption>
     <p class="figure-caption">{{drone.content |linebreaks}}</p>
+    <a class=' text-decoration-none text-blue' href="#">Подрнобнее на официальном сайте</a></figcaption>  
 </figure>
 
-
+<h3>Смотрите также</h5>
+<br>
+<div class="row">
+    {% for elem in post %}
+    <div class="col-sm-6">
+        <div class="card mb-4 w-30 p-3">
+          <a href="{{ elem.get_absolute_url }}" class="btn btn-outline   ">
+          <div class="card-body">
+            <img class=" img-fluid" src="{% static elem.image %}" alt="">
+            <h5 class="card-title text-center">{{elem.title}}</h5>
+          </div>
+        </a>
+        </div>
+      </div>
+      {% endfor %}
+  </div>
 
 
 {% endblock content %}

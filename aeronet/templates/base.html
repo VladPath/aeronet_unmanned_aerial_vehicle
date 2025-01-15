@@ -85,7 +85,7 @@
     
 
         
-    <a class="py-2 d-none d-md-inline-block" href="#">Tour</a>
+    <a class="py-2 text-decoration-none d-none d-md-inline-block" href="#">Создать новый пост</a>
   </nav>
 </header>
 
@@ -100,7 +100,7 @@
 <footer class="bg-primary bg-opacity-50">
     <div class="container text-center ">
       <div class="row">
-        <div class="col">
+        <div class="col my-2">
           <p class="mx-auto lead fw-normal">Интересуетесь новостями о развитии беспилотной авиации и событиях НТИ в этой отрасли?
             Подпишитесь на Telegram-канал «Настоящее будущее».</p>
             <a class="btn btn-outline-secondary" href="#">Подпишитесь</a>
@@ -115,6 +115,11 @@
     </div>
 
 </footer>
+
     <script src="{% static 'BAS/assets/dist/js/bootstrap.bundle.min.js' %}"></script>
+    <script>
+      $('.carousel').carousel()
+    </script>
+
   </body>
 </html>

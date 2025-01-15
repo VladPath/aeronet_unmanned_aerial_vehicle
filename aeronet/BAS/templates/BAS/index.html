@@ -5,7 +5,7 @@
 
 <div class="position-relative overflow-hidden p-3  text-center bg-primary bg-opacity-50 ">
     <div class="col-md-5 p-lg-5 mx-center  d-flex ">
-      <h1 class="display-4 fw-normal  ">КАТАЛОГ РОССИЙСКИХ МОДЕЛЕЙ БАС</h1>
+      <h1 class="display-4  font-italic ">КАТАЛОГ РОССИЙСКИХ МОДЕЛЕЙ БАС</h1>
       <img class='img-fluid'  src="{% static 'BAS/images/drone_bg.png' %}" alt="">
     </div>
   </div>
@@ -14,7 +14,7 @@
   <div class="row">
     {% for elem in post %}
     <div class="col-sm-6">
-        <div class="card mb-4">
+        <div class="card mb-4" >
           <a href="{{ elem.get_absolute_url }}" class="btn btn-outline   ">
           <div class="card-body">
             <img class=" img-fluid" src="{% static elem.image %}" alt="">
