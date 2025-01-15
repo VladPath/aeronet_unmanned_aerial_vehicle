@@ -10,20 +10,29 @@
     </div>
   </div>
 
-<div class="d-flex flex-wrap w-100 my-md-3 ps-md-3 grid gap-3  ">
-    
+{% comment %} <div class="d-flex flex-wrap w-100 my-md-3 ps-md-3 grid gap-3  "> {% endcomment %}
+  <div class="row">
     {% for elem in post %}
-
-    <div class="text-bg-white me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+    <div class="col-sm-6">
+        <div class="card mb-4">
+          <a href="{{ elem.get_absolute_url }}" class="btn btn-outline   ">
+          <div class="card-body">
+            <img class=" img-fluid" src="{% static elem.image %}" alt="">
+            <h5 class="card-title text-center">{{elem.title}}</h5>
+          </div>
+        </a>
+        </div>
+      </div>
+      {% endfor %}
+  </div>
+    {% comment %} </div> {% endcomment %}
+    {% comment %} <div class="text-bg-white me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
         <a class="btn btn-outline-secondary" href="{{ elem.get_absolute_url }}">
         <div class="my-3 py-3">
             <h2 class="display-5">{{elem.title}}</h2>
-            <img class="object-fit-contain" src="{% static elem.image %}" alt="">
-        </div>
-        </a>
-
-
-    </div>
-    {% endfor %}
+            <img class=" img-fluid" src="{% static elem.image %}" alt="">
+        </div> {% endcomment %}
+        {% comment %} </a> {% endcomment %}
+    {% comment %} </div> {% endcomment %}
 </div>
 {% endblock content %}
