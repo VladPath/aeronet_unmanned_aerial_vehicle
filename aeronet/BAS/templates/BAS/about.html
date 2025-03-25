@@ -12,10 +12,10 @@
 
 <h3>Смотрите также</h5>
 <br>
-<div class="row">
+<div class="row p-3">
     {% for elem in post %}
-    <div class="col-sm-6">
-        <div class="card mb-4 w-30 p-3">
+    <div class="col-sm-2">
+        <div class="card mb-4 w-30">
           <a href="{{ elem.get_absolute_url }}" class="btn btn-outline   ">
           <div class="card-body">
             <img class=" img-fluid" src="{% static elem.image %}" alt="">

@@ -6,12 +6,11 @@
 <div class="position-relative overflow-hidden p-3  text-center bg-primary bg-opacity-50 ">
     <div class="col-md-5 p-lg-5 mx-center  d-flex ">
       <h1 class="display-4  font-italic ">КАТАЛОГ РОССИЙСКИХ МОДЕЛЕЙ БАС</h1>
-      <img class='img-fluid'  src="{% static 'BAS/images/drone_bg.png' %}" alt="">
+      <img class='img-fluid'  src="{% static 'BAS/imagesss/drone_bg.png' %}" alt="">
     </div>
   </div>
 
-{% comment %} <div class="d-flex flex-wrap w-100 my-md-3 ps-md-3 grid gap-3  "> {% endcomment %}
-  <div class="row">
+  <div class="row m-3">
     {% for elem in post %}
     <div class="col-sm-6">
         <div class="card mb-4" >
@@ -25,14 +24,5 @@
       </div>
       {% endfor %}
   </div>
-    {% comment %} </div> {% endcomment %}
-    {% comment %} <div class="text-bg-white me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <a class="btn btn-outline-secondary" href="{{ elem.get_absolute_url }}">
-        <div class="my-3 py-3">
-            <h2 class="display-5">{{elem.title}}</h2>
-            <img class=" img-fluid" src="{% static elem.image %}" alt="">
-        </div> {% endcomment %}
-        {% comment %} </a> {% endcomment %}
-    {% comment %} </div> {% endcomment %}
 </div>
 {% endblock content %}
